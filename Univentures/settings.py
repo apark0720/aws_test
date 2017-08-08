@@ -25,7 +25,7 @@ SECRET_KEY = '90n+nz(*_#k*k$wcn7fdjuvtf!)c5#)yv!8zlx48shjntn%0m+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['univentures-dev.us-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['univentures-dev.us-west-1.elasticbeanstalk.com', 'www.univentures.co']
 
 
 # Application definition
