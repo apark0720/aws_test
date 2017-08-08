@@ -1,0 +1,37 @@
+{
+  "name": "univentures",
+  "version": "1.0.0",
+  "description": "### Background and Overview Univentures provides a platform for student startups to easily recruit team members and for students to find startups to join.  Univentures will have a two way search: 1) students will be able to search for startups to join 2) startups will be able to advertise open positions and search the existing memberbase.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "react": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "webpack": "^3.5.1",
+    "webpack-bundle-tracker": "^0.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apark0720/Univentures.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apark0720/Univentures/issues"
+  },
+  "homepage": "https://github.com/apark0720/Univentures#readme",
+  "keywords": []
+}
