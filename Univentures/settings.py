@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%^df2lh_%3qn2-cs2j^&-0pb$6efvfad7gnt0))m-v@b2vapkf'
+SECRET_KEY = '90n+nz(*_#k*k$wcn7fdjuvtf!)c5#)yv!8zlx48shjntn%0m+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,25 +30,14 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-DJANGO_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
 ]
-
-THIRD_PARTY_APPS = [
-    # "django_extensions",
-    # "rest_framework",
-]
-
-LOCAL_APPS = [
-    "users"
-]
-
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,7 +72,6 @@ WSGI_APPLICATION = 'Univentures.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
 
 if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
