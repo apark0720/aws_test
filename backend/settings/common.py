@@ -9,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 path.append(join(BASE_DIR, 'apps'))
 
-ALLOWED_HOSTS = ['localhost', 'univentures-dev.us-west-2.elasticbeanstalk.com', 'www.univentures.co' ]
+ALLOWED_HOSTS = ['localhost', 'Univentures-dev.us-west-2.elasticbeanstalk.com', 'www.univentures.co' ]
 
 DJANGO_APPS = [
     "django.contrib.admin",
