@@ -1,1 +1,0 @@
-{"status":"error","chunks":{"main":[{"name":"main-4b8b758dfed119583753.js","path":"/home/young/Univentures/assets/static/bundles/main-4b8b758dfed119583753.js"}]},"error":"ModuleBuildError","message":"Module build failed: Error: ENOENT: no such file or directory, open '/home/young/Univentures/assets/static/js/index.js'\n    at Error (native)"}
