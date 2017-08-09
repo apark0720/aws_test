@@ -4,12 +4,51 @@ from os.path import join
 
 from django.core.urlresolvers import reverse_lazy
 
+from .common import *
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '{{ secret_key }}'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+if 'RDS_DB_NAME' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ['RDS_DB_NAME'],
+            'USER': os.environ['RDS_USERNAME'],
+            'PASSWORD': os.environ['RDS_PASSWORD'],
+            'HOST': os.environ['RDS_HOSTNAME'],
+            'PORT': os.environ['RDS_PORT'],
+        }
+    }
+else:
+   DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.postgresql',
+           'USER': '',
+           'NAME': 'Univentures',
+       }
+   }
+
+INTERNAL_IPS = ['192.168.56.1']
+
+INSTALLED_APPS += (
+    'autofixture',
+)
+
+STATICFILES_DIRS.append(
+    os.path.join(BASE_DIR, os.pardir, 'frontend', 'build'),
+)
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 path.append(join(BASE_DIR, 'apps'))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'www,univentures.co',
+                 'Univentures-dev.us-west-2.elasticbeanstalk.com']
 
 DJANGO_APPS = [
     "django.contrib.admin",
@@ -121,3 +160,4 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'users.EmailUser'
+
