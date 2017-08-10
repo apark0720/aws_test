@@ -1,48 +1,69 @@
-# IDEs
-.project
-.pydevproject
-.idea
-.vscode
-.settings
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# Random files
-*~
-\#*
+### SublimeText ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
 
-virtualenv/
-htmlcov/
-src/static_dist/
-src/static_root/
+# workspace files are user-specific
+*.sublime-workspace
 
-# Python compiled byte code
-*.pyc
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
 
-# SQLite3 database
-*.sqlite
+# sftp configuration file
+sftp-config.json
 
-# Node modules
-node_modules/
-yarn.lock
-npm-debug.log
+# Basics
+*.py[cod]
+__pycache__
 
-# Coverage 
-coverage/
+# Logs
+logs
+*.log
+pip-log.txt
+npm-debug.log*
+
+# Unit test / coverage reports
 .coverage
-.cache
+.tox
+nosetests.xml
+htmlcov
 
-# static validation files
-.eslintrc
-.sass-lint.yml
-.prospector.yml
-.coveragerc
+# Translations
+*.mo
+*.pot
 
-# in case we run shippable tests don't include it
-shippable/
+# Pycharm
+.idea/*
 
-# not include scripts because they come from external module
-scripts/
 
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+# Vim
+
+*~
+*.swp
+*.swo
+
+# npm
+node_modules/
+
+# Compass
+.sass-cache
+
+# virtual environments
+.env
+
+# User-uploaded media
+univentures/media/
+
+
+
+staticfiles/
+
+.cache/
+

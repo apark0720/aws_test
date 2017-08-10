@@ -1,27 +1,11 @@
+sudo: true
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq build-essential gettext python-dev zlib1g-dev libpq-dev xvfb
+  - sudo apt-get install -qq libtiff4-dev libjpeg8-dev libfreetype6-dev liblcms1-dev libwebp-dev
+  - sudo apt-get install -qq graphviz-dev python-setuptools python3-dev python-virtualenv python-pip
+  - sudo apt-get install -qq firefox automake libtool libreadline6 libreadline6-dev libreadline-dev
+  - sudo apt-get install -qq libsqlite3-dev libxml2 libxml2-dev libssl-dev libbz2-dev wget curl llvm
 language: python
-branches:
-  only: 
-    - master
 python:
-  - "3.4"
-services:
-  - postgresql
-before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-  - git submodule init
-  - git submodule update
-  - ./scripts/get_static_validation.sh
-# command to install dependencies
-install: 
-  - pip install -r py-requirements/dev.txt
-  - nvm install 6
-  - npm install
-  - npm run prod
-# command to run tests
-script:
-  - py.test -c pytest_ci.ini tests/
-  - prospector  --profile-path=. --profile=.prospector.yml --path=src --ignore-patterns=static
-  - bandit -r src
-  - npm run coverage
-  - npm run lintjs
-  - npm run lintscss
+  - "3.5"
